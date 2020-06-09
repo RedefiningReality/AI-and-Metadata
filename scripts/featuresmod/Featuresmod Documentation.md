@@ -5,9 +5,9 @@ By: your one and only John Ford aka 2.0
 
 ### Documentation:
 `CSVReader()`
-	initialise with filename "features.csv"
+initialise with filename "features.csv"
 `CSVReader(filename)`
-	initialise with custom filename
+initialise with custom filename
 
 CSVReader Functions:
 `update_csv(filename="features.csv")`
