@@ -14,7 +14,7 @@ This repository contains all of the Python scripts associated with image manipul
 - [greyscale.py](scripts/greyscale.py)
 #### [featuresmod](scripts/featuresmod/)
 (for storing image features in database)
-- [Featuresmod Documentation.md](scripts/featuresmod/Featuresmod Documentation.md)
+- [Featuresmod_Documentation.md](scripts/featuresmod/Featuresmod_Documentation.md)
 - [features.py](scripts/featuresmod/features.py)
 - [featuresmod.py](scripts/featuresmod/featuresmod.py)
 - [tester.py](scripts/featuresmod/tester.py)
