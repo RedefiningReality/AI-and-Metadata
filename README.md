@@ -18,3 +18,8 @@ This repository contains all of the Python scripts associated with image manipul
 - [features.py](scripts/featuresmod/features.py)
 - [featuresmod.py](scripts/featuresmod/featuresmod.py)
 - [tester.py](scripts/featuresmod/tester.py)
+#### [ai](ai/)
+- [load_imgs.py](ai/load_imgs.py)
+- [tf_load_images.py](ai/tf_load_images.py) ⇒ load images as tensors
+- [vgg16a_load_images.py](ai/vgg16a_load_images.py) ⇒ load images for vgg16 alpha
+- [vgg16_alpha.py](ai/vgg16_alpha.py) ⇒ original vgg16 algorithm test
