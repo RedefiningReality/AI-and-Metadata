@@ -1,5 +1,6 @@
 # Features Mod
-by your one and only John Ford aka 2.0
+By: your one and only John Ford aka 2.0
+
 (contrary to popular belief, this is not actually a Minecraft mod)
 
 ### Documentation:
