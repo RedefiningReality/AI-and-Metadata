@@ -6,15 +6,18 @@ By: your one and only John Ford aka 2.0
 ### Documentation:
 `CSVReader()`
 initialise with filename "features.csv"
+
 `CSVReader(filename)`
 initialise with custom filename
 
 CSVReader Functions:
 `update_csv(filename="features.csv")`
 	read from new csv file filename
+	
 `images(feature)`
 	get all images with feature
 	returns a list containing all images
+	
 `feature(images)`
 	get all features for image
 	returns a list containing all features
