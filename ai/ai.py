@@ -306,24 +306,3 @@ loss0, accuracy0 = model.evaluate(test_ds, steps=VALIDATION_STEPS_2)
 print()
 print("Loss: {:5.2f}".format(loss0*100))
 print("Accuracy: {:5.2f}".format(accuracy0*100))
-
-"""
-# accuracy
-plt.plot(history.history['acc'])
-plt.plot(history.history['val_acc'])
-plt.title('Model Accuracy')
-plt.ylabel('Accuracy')
-plt.xlabel('Epoch')
-plt.legend(['train', 'test'], loc='upper left')
-plt.show()
-
-# loss
-# summarize history for loss
-plt.plot(history.history['loss'])
-plt.plot(history.history['val_loss'])
-plt.title('Model Loss')
-plt.ylabel('Loss')
-plt.xlabel('Epoch')
-plt.legend(['train', 'test'], loc='upper left')
-plt.show()
-"""
