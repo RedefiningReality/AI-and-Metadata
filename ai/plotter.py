@@ -37,8 +37,8 @@ with open(args.path,'r') as csvfile:
 				y1.append(float(row[y1_index]))
 				y2.append(float(row[y2_index]))
 				
-				sum1 += float(row[y1_index])
-				sum2 += float(row[y2_index])
+			sum1 += float(row[y1_index])
+			sum2 += float(row[y2_index])
 			counter += 1
 
 avg_train = "{:5.2f}".format(100*sum1/len(y1))
