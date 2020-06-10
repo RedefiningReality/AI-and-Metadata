@@ -7,21 +7,21 @@ import argparse, sys
 parser = argparse.ArgumentParser(description="""This is an Artificial Intelligence capable of categorising images
 									given a set of training data. Its intended use is for accurate and timely forgery 
 									detection and classification of images as forged or original.""")
-parser.add_argument("algorithm", choices=["vgg16", "vgg19"], help="Algorithm to use. Choices are vgg16 and vgg19")
-parser.add_argument("data", help="The path of the directory containing the image subdirectories (ex. /home/lena/vien/image_run_0 where image_run_0 contains folders original and forged)")
-parser.add_argument("-o", "--output-dir", default=None, help="Store the resulting weights to a ckpt directory (ex. ~/training/cp.ckpt)")
-parser.add_argument("-u", "--existing-weights", default=None, help="Load existing weights from a ckpt directory")
-parser.add_argument("-p", "--history-file", default=None, help="Output file for loss and accuracy history (ex. ~/training/history_log.csv)")
-parser.add_argument("-t", "--percent-test", default=0.2, type=float, help="A float representing the percentage of photos to use as test data rather than training data (default is %(default)s)")
-parser.add_argument("-w", "--width", default=100, type=int, help="Resize width of images to be parsed by model (default is %(default)s)")
-parser.add_argument("-x", "--height", default=100, type=int, help="Resize height of images to be parsed by model (default is %(default)s)")
-parser.add_argument("-b", "--batch-size", default=32, type=int, help="Batch size (default is %(default)s)")
-parser.add_argument("-e", "--epochs", type=int, help="Number of epochs (default is number of images / batch size)")
-parser.add_argument("-s", "--steps", default=30, type=int, help="Number of steps per epoch (default is %(default)s)")
-parser.add_argument("-c", "--validation-steps", default=2, type=int, help="Number of validation steps per epoch during training (default is %(default)s)")
-parser.add_argument("-d", "--final-validation-steps", default=100, type=int, help="Number of validation steps in calculating the final algorithm accuracy (default is %(default)s)")
-parser.add_argument("-a", "--activation", default="softmax", help="The activation function for the final network layer (default is %(default)s)")
-parser.add_argument("-v", "--verbose", action="count", help="Program verbosity. For max verbosity, use -vv")
+parser.add_argument("algorithm", choices=["vgg16", "vgg19"], help="algorithm to use. Choices are vgg16 and vgg19")
+parser.add_argument("data", help="the path of the directory containing the image subdirectories (ex. /home/lena/vien/image_run_0 where image_run_0 contains folders original and forged)")
+parser.add_argument("-o", "--output-dir", default=None, help="store the resulting weights to a ckpt directory (ex. ~/training/cp.ckpt)")
+parser.add_argument("-u", "--existing-weights", default=None, help="load existing weights from a ckpt directory")
+parser.add_argument("-p", "--history-file", default=None, help="output file for loss and accuracy history (ex. ~/training/history_log.csv)")
+parser.add_argument("-t", "--percent-test", default=0.2, type=float, help="a float representing the percentage of photos to use as test data rather than training data (default is %(default)s)")
+parser.add_argument("-w", "--width", default=100, type=int, help="resize width of images to be parsed by model (default is %(default)s)")
+parser.add_argument("-x", "--height", default=100, type=int, help="resize height of images to be parsed by model (default is %(default)s)")
+parser.add_argument("-b", "--batch-size", default=32, type=int, help="batch size (default is %(default)s)")
+parser.add_argument("-e", "--epochs", type=int, help="number of epochs (default is number of images / batch size)")
+parser.add_argument("-s", "--steps", default=30, type=int, help="number of steps per epoch (default is %(default)s)")
+parser.add_argument("-c", "--validation-steps", default=2, type=int, help="number of validation steps per epoch during training (default is %(default)s)")
+parser.add_argument("-d", "--final-validation-steps", default=100, type=int, help="number of validation steps in calculating the final algorithm accuracy (default is %(default)s)")
+parser.add_argument("-a", "--activation", default="softmax", help="the activation function for the final network layer (default is %(default)s)")
+parser.add_argument("-v", "--verbose", action="count", help="program verbosity. For max verbosity, use -vv")
 
 args = parser.parse_args(sys.argv[1:])
 
@@ -39,6 +39,9 @@ import os
 from keras.callbacks import CSVLogger
 
 verbosity = args.verbose
+if verbosity == None:
+	verbosity = 0
+
 model = args.algorithm
 
 data_dir = args.data
