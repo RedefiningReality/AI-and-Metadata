@@ -19,8 +19,8 @@ parser.add_argument("-s", "--seed", type=int, default=randrange(500), help="seed
 parser.add_argument("-v", "--verbose", action="count", help="program verbosity - for max verbosity, use -vv")
 
 args = parser.parse_args(sys.argv[1:])
-if verbosity == None:
-	verbosity = 0
+if args.verbose == None:
+	args.verbose = 0
 
 import numpy as np
 import os
