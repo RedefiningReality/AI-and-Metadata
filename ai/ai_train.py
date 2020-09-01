@@ -66,7 +66,7 @@ print(model.summary())
 
 data_dir = pathlib.Path(args.data)
 
-image_count = len(list(data_dir.glob('*/*.jpg')))
+image_count = len(list(data_dir.glob('*/*.png')))
 if args.verbose > 1:
     print('Number of images in dataset: ' + str(image_count))
 
@@ -115,12 +115,12 @@ val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
 if args.verbose > 0:
     print('Setting up preprocessing rules')
 data_augmentation = keras.Sequential([
-    layers.experimental.preprocessing.RandomFlip('horizontal', input_shape=(height, width, 3)),
+    layers.experimental.preprocessing.RandomFlip('horizontal', input_shape=(224, 224, 3)),
     layers.experimental.preprocessing.RandomRotation(0.1),
     layers.experimental.preprocessing.RandomZoom(0.1),
 ])
 
-base = model(weights=None, input_shape=(height, width, 3), classes=num_classes)
+base = keras.applications.VGG16(weights=None, input_shape=(224, 224, 3), classes=num_classes)
 
 if args.verbose > 0:
     print('Creating model')
