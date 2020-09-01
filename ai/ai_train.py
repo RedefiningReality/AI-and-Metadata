@@ -61,7 +61,6 @@ elif args.model == 'InceptionV3':
     height = 299
     model = keras.applications.InceptionV3
 
-model = keras.applications.ResNet50(weights=None, input_shape=(height, width, 3), classes=2)
 print(model.summary())
 
 data_dir = pathlib.Path(args.data)
