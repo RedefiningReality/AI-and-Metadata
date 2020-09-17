@@ -4,7 +4,7 @@ This repository contains all of the Python scripts associated with image manipul
 ### Repository Contents
 #### [scripts](scripts/)
 - [vienify.py](scripts/vienify.py) ⇒ updated script for copy-paste and copy-move forgeries (vienify.py -h for help screen)
-- - Note: specify the same source and image to layer directories for copy-move
+  - Note: specify the same source and image to layer directories for copy-move
 - [making_fakes_fixed.py](scripts/making_fakes_fixed.py) ⇒ old script for copy-move forgeries
 - [fightgirl_fakes.py](scripts/fightgirl_fakes.py) ⇒ old script for copy-paste forgeries (see comments in script)
 - [resize.py](scripts/resize.py) ⇒ updated script for resizing images (resize.py -h for help screen)
