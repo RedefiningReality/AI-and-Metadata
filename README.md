@@ -1,5 +1,5 @@
 # AI and Metadata
-This repository contains all of the Python scripts associated with image manipulation for the artificial intelligence, metadata manipulation, as well as the source code for the artificial intelligence itself.
+This repository contains all of the Python scripts associated with image manipulation for the artificial intelligence, metadata manipulation, as well as the source code for the artificial intelligence itself. This was originally a project for the Illinois Tech CyberHawks organisation that has been abandoned for a while now. Credit to Vien for some of these scripts, but most of them were written by me.
 
 ### Repository Contents
 #### [scripts](scripts/)
